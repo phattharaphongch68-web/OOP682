@@ -13,7 +13,7 @@ def main():
     my_dog.info()
     your_dog = Dog("cis",10)
     your_dog.info()
-    print(my_dog) #ดีกว่าเรียกใช้ .info แต่ตอง return wdawdwadwad
+    print(my_dog) #ดีกว่าเรียกใช้ .info แต่ตอง return wdawdwadwaddwadw
     print(your_dog)
 
 
