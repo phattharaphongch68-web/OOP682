@@ -1,4 +1,4 @@
-from model.Person import Person
+from .Person import Person
 
 class Staff(Person):
     def __init__(self,name,age,pid,staff_id):

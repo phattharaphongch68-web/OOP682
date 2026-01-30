@@ -1,22 +1,21 @@
-class Dog():
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    
-    def info(self):
-        print(f"{self.name} อายุ {self.age} ขวบ")
+import sys
+from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWebEngineWidgets import QWebEngineView
+from PySide6.QtCore import QUrl
 
-    def __str__(self): 
-        return f"{self.name} อายุ {self.age} ขวบ"
-def main():
-    my_dog = Dog("guts",5)
-    my_dog.info()
-    your_dog = Dog("cis",10)
-    your_dog.info()
-    print(my_dog) #ดีกว่าเรียกใช้ .info แต่ตอง return wdawdwadwaddwadw
-    print(your_dog)
+class BrowserWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        
+        self.setWindowTitle("Simple Browser")
+        self.resize(1024, 768)
 
-
+        self.browser = QWebEngineView()
+        self.setCentralWidget(self.browser)
+        self.browser.setUrl(QUrl("https://www.netflix.com/th/"))
 
 if __name__ == "__main__":
-    main()
+    app = QApplication(sys.argv)
+    window = BrowserWindow()
+    window.show()
+    sys.exit(app.exec())
